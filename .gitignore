@@ -1,0 +1,10 @@
+*.docx
+*.txt
+.gemini/
+.agents/
+_agents/
+.agent/
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
