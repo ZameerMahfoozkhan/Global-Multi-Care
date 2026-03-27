@@ -53,6 +53,8 @@
                 <a href="#services">Services</a>
                 <a href="#process">How it Works</a>
                 <a href="#about">About</a>
+                <a href="#about">Locations</a>
+                <a href="#contact">Contact</a>
                 <div class="mobile-cta">
                     <a href="tel:+919120992012" class="primary-btn"><i class="fas fa-phone-alt"></i> +91 9120992012</a>
                 </div>
@@ -290,7 +292,7 @@
                     <li><i class="fas fa-map-marker-alt"></i> Dehradun</li>
                 </ul>
             </div>
-            <div class="about-contact">
+            <div id="contact" class="about-contact">
                 <div class="contact-card">
                     <h3>Contact Information</h3>
                     <p><i class="fas fa-map-marker-alt"></i> 303, Post Sigankhera, Khizarpur, Rampur, UP 244927, India</p>
@@ -311,20 +313,20 @@
             </div>
             <div class="faq-list">
                 <div class="faq-item">
-                    <h4><i class="fas fa-question-circle"></i> Do you provide an inspection before repairing?</h4>
-                    <p>Yes, our expert technicians first inspect the appliance to identify the exact issue and provide a clear quotation before starting the actual repair.</p>
+                    <h4 class="faq-question"><i class="fas fa-question-circle"></i> Do you provide an inspection before repairing? <i class="fas fa-chevron-down toggle-icon" style="margin-left: auto;"></i></h4>
+                    <div class="faq-answer"><p>Yes, our expert technicians first inspect the appliance to identify the exact issue and provide a clear quotation before starting the actual repair.</p></div>
                 </div>
                 <div class="faq-item">
-                    <h4><i class="fas fa-question-circle"></i> How long does a standard repair take?</h4>
-                    <p>Most common repairs are completed within 1 to 2 hours right at your doorstep. More complex issues may require additional time or parts acquisition.</p>
+                    <h4 class="faq-question"><i class="fas fa-question-circle"></i> How long does a standard repair take? <i class="fas fa-chevron-down toggle-icon" style="margin-left: auto;"></i></h4>
+                    <div class="faq-answer"><p>Most common repairs are completed within 1 to 2 hours right at your doorstep. More complex issues may require additional time or parts acquisition.</p></div>
                 </div>
                 <div class="faq-item">
-                    <h4><i class="fas fa-question-circle"></i> What payment methods do you accept?</h4>
-                    <p>We accept Cash, UPI (Google Pay, PhonePe, Paytm), and online bank transfers for your convenience.</p>
+                    <h4 class="faq-question"><i class="fas fa-question-circle"></i> What payment methods do you accept? <i class="fas fa-chevron-down toggle-icon" style="margin-left: auto;"></i></h4>
+                    <div class="faq-answer"><p>We accept Cash, UPI (Google Pay, PhonePe, Paytm), and online bank transfers for your convenience.</p></div>
                 </div>
                 <div class="faq-item">
-                    <h4><i class="fas fa-question-circle"></i> Do you provide a warranty on your repairs?</h4>
-                    <p>Yes, we offer a limited post-service warranty on the specific repairs and replacement parts we provide, ensuring peace of mind.</p>
+                    <h4 class="faq-question"><i class="fas fa-question-circle"></i> Do you provide a warranty on your repairs? <i class="fas fa-chevron-down toggle-icon" style="margin-left: auto;"></i></h4>
+                    <div class="faq-answer"><p>Yes, we offer a limited post-service warranty on the specific repairs and replacement parts we provide, ensuring peace of mind.</p></div>
                 </div>
             </div>
         </div>
@@ -347,6 +349,8 @@
                 <a href="#services">Our Services</a>
                 <a href="#process">How it Works</a>
                 <a href="#about">About Us</a>
+                <a href="#about">Locations</a>
+                <a href="#contact">Contact Us</a>
             </div>
             <div class="footer-col links">
                 <h3>Legal Information</h3>
@@ -398,9 +402,24 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const parent = question.parentElement;
+                
+                // Optional: close other open items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== parent) item.classList.remove('active');
                 });
+                
+                parent.classList.toggle('active');
             });
         });
         
