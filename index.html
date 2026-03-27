@@ -39,7 +39,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="img/log-removebg-preview.png" alt="Global Multi Care Solution Logo">
+                    <img src="img/logo1.png" alt="Global Multi Care Solution Logo">
                 </a>
             </div>
             
@@ -80,10 +80,26 @@
                 <form id="hero-wa-form" class="hero-form">
                     <h3>Book Your Repair Now</h3>
                     <div class="form-group">
-                        <input type="text" id="wa-name" placeholder="Your Name" required>
+                        <input type="text" id="wa-name" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
                         <input type="tel" id="wa-phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="wa-city" required>
+                            <option value="" disabled selected>Select Your City</option>
+                            <option value="Lucknow">Lucknow</option>
+                            <option value="Kanpur">Kanpur</option>
+                            <option value="Varanasi">Varanasi</option>
+                            <option value="Prayagraj">Prayagraj</option>
+                            <option value="Noida / Greater Noida">Noida / Greater Noida</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Dehradun">Dehradun</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="wa-address" placeholder="Complete Address" rows="2" required></textarea>
                     </div>
                     <div class="form-group">
                         <select id="wa-service" required>
@@ -189,6 +205,38 @@
         </div>
     </section>
 
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p>What makes Global Multi Care Solution your best choice for home appliance repair?</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Expert Technicians</h3>
+                    <p>Highly trained and background-verified professionals ensuring top-quality repairs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Fast Response</h3>
+                    <p>Quick doorstep service to ensure minimum downtime for your everyday appliances.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Transparent and highly competitive pricing with no hidden charges.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Quality Spare Parts</h3>
+                    <p>We use genuine and high-quality parts to guarantee the longevity of your repair.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Process Section -->
     <section id="process" class="process">
         <div class="container">
@@ -232,14 +280,14 @@
                 <p>We are a professional home appliance repair service provider offering services across multiple cities in India. We aim to provide convenient doorstep service with a focus on timely response and top-tier customer support.</p>
                 <p>Our practical approach ensures clear communication and transparent service processes. All services are carried out by trained technicians.</p>
                 <ul class="cities-list">
-                    <li><i class="fas fa-check"></i> Lucknow</li>
-                    <li><i class="fas fa-check"></i> Kanpur</li>
-                    <li><i class="fas fa-check"></i> Varanasi</li>
-                    <li><i class="fas fa-check"></i> Prayagraj</li>
-                    <li><i class="fas fa-check"></i> Noida / Greater Noida</li>
-                    <li><i class="fas fa-check"></i> Pune</li>
-                    <li><i class="fas fa-check"></i> Goa</li>
-                    <li><i class="fas fa-check"></i> Dehradun</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Lucknow</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kanpur</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Varanasi</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Prayagraj</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Noida / Greater Noida</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Pune</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Goa</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Dehradun</li>
                 </ul>
             </div>
             <div class="about-contact">
@@ -249,6 +297,34 @@
                     <p><i class="fas fa-phone-alt"></i> +91 9120992012</p>
                     <p><i class="fas fa-globe"></i> https://service-repair.online/</p>
                     <a href="tel:+919120992012" class="primary-btn w-100"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our repair services.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4><i class="fas fa-question-circle"></i> Do you provide an inspection before repairing?</h4>
+                    <p>Yes, our expert technicians first inspect the appliance to identify the exact issue and provide a clear quotation before starting the actual repair.</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-question-circle"></i> How long does a standard repair take?</h4>
+                    <p>Most common repairs are completed within 1 to 2 hours right at your doorstep. More complex issues may require additional time or parts acquisition.</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-question-circle"></i> What payment methods do you accept?</h4>
+                    <p>We accept Cash, UPI (Google Pay, PhonePe, Paytm), and online bank transfers for your convenience.</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-question-circle"></i> Do you provide a warranty on your repairs?</h4>
+                    <p>Yes, we offer a limited post-service warranty on the specific repairs and replacement parts we provide, ensuring peace of mind.</p>
                 </div>
             </div>
         </div>
@@ -292,8 +368,10 @@
             e.preventDefault();
             const name = document.getElementById('wa-name').value;
             const phone = document.getElementById('wa-phone').value;
+            const city = document.getElementById('wa-city').value;
+            const address = document.getElementById('wa-address').value;
             const service = document.getElementById('wa-service').value;
-            const text = `Hi, I want to book a service.%0A*Name*: ${name}%0A*Phone*: ${phone}%0A*Appliance*: ${service}`;
+            const text = `Hi, I want to book a service.%0A*Name*: ${name}%0A*Phone*: ${phone}%0A*City*: ${city}%0A*Address*: ${address}%0A*Appliance*: ${service}`;
             window.open(`https://wa.me/919120992012?text=${text}`, '_blank');
         });
 
