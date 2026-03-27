@@ -38,14 +38,23 @@
     <header class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="img/log.jpeg" alt="Global Multi Care Solution Logo">
+                <img src="img/log-removebg-preview.png" alt="Global Multi Care Solution Logo">
                 <span>Global Multi Care</span>
             </div>
+            
+            <!-- Hamburger Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <nav class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
                 <a href="#process">How it Works</a>
                 <a href="#about">About</a>
+                <div class="mobile-cta">
+                    <a href="tel:+919120992012" class="primary-btn"><i class="fas fa-phone-alt"></i> +91 9120992012</a>
+                </div>
             </nav>
             <div class="nav-cta">
                 <a href="tel:+919120992012" class="primary-btn"><i class="fas fa-phone-alt"></i> +91 9120992012</a>
@@ -285,6 +294,25 @@
             const service = document.getElementById('wa-service').value;
             const text = `Hi, I want to book a service.%0A*Name*: ${name}%0A*Phone*: ${phone}%0A*Appliance*: ${service}`;
             window.open(`https://wa.me/919120992012?text=${text}`, '_blank');
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.querySelector('i').classList.toggle('fa-bars');
+            menuToggle.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            });
         });
 
         // Smooth scroll for anchor links
