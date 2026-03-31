@@ -27,11 +27,8 @@
 <body>
 
     <!-- Floating Action Buttons -->
-    <a href="https://wa.me/919120992012" class="floating-btn whatsapp-btn" target="_blank" aria-label="WhatsApp Us">
-        <i class="fab fa-whatsapp"></i>
-    </a>
     <a href="tel:+919120992012" class="floating-btn call-btn" aria-label="Call Us">
-        <i class="fas fa-phone-alt"></i>
+        <i class="fas fa-phone-alt"></i> <span class="call-text">Call Now</span>
     </a>
 
     <!-- Navbar -->
@@ -77,8 +74,27 @@
                     <div class="stat"><i class="fas fa-tools"></i> <span>Expert Techs</span></div>
                     <div class="stat"><i class="fas fa-stopwatch"></i> <span>Timely Response</span></div>
                 </div>
+                <div class="hero-cta-buttons">
+                    <a href="#hero-wa-form" class="primary-btn large"><i class="fas fa-calendar-check"></i> Book Doorstep Service</a>
+                    <a href="#services" class="secondary-btn large"><i class="fas fa-cogs"></i> Explore Services</a>
+                </div>
             </div>
-            <div class="hero-form-container">
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container booking-container">
+            <div class="booking-text">
+                <h2>Request a Doorstep Repair</h2>
+                <p>Fill out the form directly to schedule an expert visit. We'll be there in no time to get your appliances running smoothly again.</p>
+                <div class="booking-features">
+                    <p><i class="fas fa-check-circle"></i> Transparent Pricing</p>
+                    <p><i class="fas fa-check-circle"></i> Quick Diagnosis</p>
+                    <p><i class="fas fa-check-circle"></i> Satisfaction Guaranteed</p>
+                </div>
+            </div>
+            <div class="booking-form-wrapper">
                 <form id="hero-wa-form" class="hero-form">
                     <h3>Book Your Repair Now</h3>
                     <div class="form-group">
@@ -115,7 +131,7 @@
                         </select>
                     </div>
                     <div class="hero-actions-new">
-                        <button type="submit" class="primary-btn w-100 book-btn"><i class="fab fa-whatsapp"></i> Book Now</button>
+                        <button type="submit" class="primary-btn w-100 book-btn"><i class="fab fa-whatsapp"></i> Book on WhatsApp</button>
                         <a href="tel:+919120992012" class="call-btn-large w-100"><i class="fas fa-phone-alt"></i> Call Now</a>
                     </div>
                 </form>
@@ -351,6 +367,7 @@
                 <a href="#about">About Us</a>
                 <a href="#about">Locations</a>
                 <a href="#contact">Contact Us</a>
+                <a href="#faq">FAQ</a>
             </div>
             <div class="footer-col links">
                 <h3>Legal Information</h3>
@@ -385,6 +402,7 @@
         
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('menu-open');
             menuToggle.querySelector('i').classList.toggle('fa-bars');
             menuToggle.querySelector('i').classList.toggle('fa-times');
         });
@@ -393,6 +411,7 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                menuToggle.classList.remove('menu-open');
                 menuToggle.querySelector('i').classList.add('fa-bars');
                 menuToggle.querySelector('i').classList.remove('fa-times');
             });
